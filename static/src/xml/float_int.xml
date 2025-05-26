@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates id="template" xml:space="preserve">
-   <t t-name="float_int_widget.FloatIntField">
-       <input type="number"  class="o_input flex-grow-1 flex-shrink-1" t-ref="inputfloatint"/>
+   <t t-name="float_int_widget">
+       <input type="number"  class="o_input flex-grow-1 flex-shrink-1" t-ref="input_float_int"/>
    </t>
 </templates>
 
+<!--     <templates>-->
+<!--         <t t-name="my_module.MyWidget">-->
+<!--             <div class="my-widget">-->
+<!--                 <label>Select an option:</label>-->
+<!--                 <select t-onchange="selectedOption = $event.target.value">-->
+<!--                     <t t-foreach="options" t-as="option">-->
+<!--                         <option t-att-value="option.value" t-if="option.value === selectedOption" t-att-selected="true">-->
+<!--                             <t t-esc="option.label"/>-->
+<!--                         </option>-->
+<!--                         <option t-att-value="option.value" t-if="option.value !== selectedOption">-->
+<!--                             <t t-esc="option.label"/>-->
+<!--                         </option>-->
+<!--                     </t>-->
+<!--                 </select>-->
+<!--                 <div class="selected-option">-->
+<!--                     Selected: <t t-esc="selectedOption"/>-->
+<!--                 </div>-->
+<!--             </div>-->
+<!--         </t>-->
+<!--     </templates>-->
