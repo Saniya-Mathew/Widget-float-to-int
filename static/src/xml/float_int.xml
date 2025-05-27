@@ -1,27 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<templates id="template" xml:space="preserve">
-   <t t-name="float_int_widget">
-       <input type="number"  class="o_input flex-grow-1 flex-shrink-1" t-ref="input_float_int"/>
-   </t>
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="float_int_widget" owl="1">
+        <input
+            type="number"
+            t-ref="input_float_int"
+            t-att-value="props.record.data[props.name]"
+            class="o_input"
+        />
+    </t>
 </templates>
-
-<!--     <templates>-->
-<!--         <t t-name="my_module.MyWidget">-->
-<!--             <div class="my-widget">-->
-<!--                 <label>Select an option:</label>-->
-<!--                 <select t-onchange="selectedOption = $event.target.value">-->
-<!--                     <t t-foreach="options" t-as="option">-->
-<!--                         <option t-att-value="option.value" t-if="option.value === selectedOption" t-att-selected="true">-->
-<!--                             <t t-esc="option.label"/>-->
-<!--                         </option>-->
-<!--                         <option t-att-value="option.value" t-if="option.value !== selectedOption">-->
-<!--                             <t t-esc="option.label"/>-->
-<!--                         </option>-->
-<!--                     </t>-->
-<!--                 </select>-->
-<!--                 <div class="selected-option">-->
-<!--                     Selected: <t t-esc="selectedOption"/>-->
-<!--                 </div>-->
-<!--             </div>-->
-<!--         </t>-->
-<!--     </templates>-->
