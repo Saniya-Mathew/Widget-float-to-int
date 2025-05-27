@@ -4,7 +4,7 @@
         <input
             type="number"
             t-ref="input_float_int"
-            t-att-value="props.record.data[props.name]"
+            t-att-value="props.value"
             class="o_input"
         />
     </t>

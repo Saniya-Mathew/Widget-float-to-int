@@ -7,10 +7,13 @@ import { parseFloat } from "@web/views/fields/parsers";
 
 export class FloatInt extends Component{
    static template = "float_int_widget";
+
    setup(){
 
        this.input = useRef('input_float_int')
-       this.roundingMode = useState({ mode: this.props.options?.mode || " " });
+       this.roundingMode = useState({ mode: this.props.options?.mode || "half-up" });
+       console.log(this.props)
+       console.log(this.props.options?.mode)
        useInputField({ getValue: () => this.props.record.data[this.props.name] || "" ,
        refName: "input_float_int",parse: (v) => parseFloat(v),});
 
@@ -25,7 +28,8 @@ export class FloatInt extends Component{
        if (this.input.el)
            {
            const value = parseFloat(this.input.el.value);
-           const mode = this.roundingMode.mode;
+           const mode = this.roundingMode.value;
+           console.log(mode)
 //           let roundedValue;
            switch (mode) {
                 case "half-up":
