@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="float_int_widget" owl="1">
-        <input
-            type="number"
-            t-ref="input_float_int"
-            t-att-value="props.value"
-            class="o_input"
-        />
+    <t t-name="float_int_widget">
+        <input t-ref="input_float_int"
+               t-att-value="props.value"
+               t-att-readonly="props.readOnly"
+               type="text"
+               class="o_input"/>
     </t>
 </templates>

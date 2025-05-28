@@ -3,7 +3,7 @@
     'version': '1.0',
     'category': '',
     'type': 'module',
-    'depends': ['base'],
+    'depends': ['base','pos_purchase_limit'],
     'description': "A widget that convert floatig values to nearest integer",
     'data': [
 
